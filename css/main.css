@@ -1,81 +1,96 @@
 
-banner-title {
-  z-index: 5;
-  top: 20%;
-
-  color: #fff;
+html {
   font-family: "Unica One", sans-serif;
+}
 
-  animation: fade 1s linear forwards;
+h1 {
+  color: #fff;
+  animation: blur 1s linear;
+  transform: translateX(-320px);
+  transform: translateY(-500px);
+  z-index: 1000;
 }
 
 #narwhal-eye {
-  animation: fade .2s .9s linear forwards;
+  animation: blur 1s linear forwards;
   opacity: 0;
+  animation-delay: 4s;
 }
 
-@keyframes fade {
+#narwhal-body {
+  animation: offset 2s linear forwards;
+  stroke-dasharray: 1900px;
+  stroke-dashoffset: 1890px;
+  animation-delay: 1s;
+}
+
+#rainbow-indigo {
+  animation: offset 2s linear forwards;
+  stroke-dasharray: 1900px;
+  stroke-dashoffset: 1900px;
+  animation-delay: 2s;
+}
+
+#rainbow-violet {
+  animation: offset 2s linear forwards;
+  stroke-dasharray: 1920px;
+  stroke-dashoffset: 1950px;
+  animation-delay: 2s;
+}
+
+#rainbow-blue {
+  animation: offset 2s linear forwards;
+  stroke-dasharray: 1920px;
+  stroke-dashoffset: 1950px;
+  animation-delay: 2s;
+}
+
+#rainbow-green {
+  animation: offset 2s linear forwards;
+  stroke-dasharray: 1900px;
+  stroke-dashoffset: 1900px;
+  animation-delay: 2s;
+}
+
+#rainbow-yellow {
+  animation: offset 2s linear forwards;
+  stroke-dasharray: 1900px;
+  stroke-dashoffset: 1900px;
+  animation-delay: 2s;
+}
+
+#rainbow-orange {
+  animation: offset 2s linear forwards;
+  stroke-dasharray: 1900px;
+  stroke-dashoffset: 1900px;
+  animation-delay: 2s;
+}
+
+#rainbow-red {
+  animation: offset 2s linear forwards;
+  stroke-dasharray: 1900px;
+  stroke-dashoffset: 1900px;
+  animation-delay: 2s;
+}
+
+@keyframes offset {
+
+  0% {
+    stroke-dashoffset: 0;
+  }
+
+}
+
+@keyframes blur {
 
   0% {
     opacity: 0;
+    filter: blur(7px);
   }
 
   100% {
     opacity: 1;
-  }
-
-}
-
-#narwhal-body {
-  stroke-dasharray: 1910px;
-  stroke-dashoffset: 1910px;
-  animation: drawing-line 1s linear forwards;
-}
-
-#rainbow-violet {
-  stroke-dasharray: 1920px;
-  stroke-dashoffset: 1920px;
-}
-
-#rainbow-indigo {
-  stroke-dasharray: 1815px;
-  stroke-dashoffset: 1815px;
-}
-
-#rainbow-blue {
-  stroke-dasharray: 1710px;
-  stroke-dashoffset: 1710px;
-}
-
-#rainbow-green {
-  stroke-dasharray: 1600px;
-  stroke-dashoffset: 1600px;
-}
-
-#rainbow-yellow {
-  stroke-dasharray: 1490px;
-  stroke-dashoffset: 1490px;
-}
-
-#rainbow-orange {
-  stroke-dasharray: 1370px;
-  stroke-dashoffset: 1370px;
-}
-
-#rainbow-red {
-  stroke-dasharray: 1245px;
-  stroke-dashoffset: 1245px;
-}
-
-#rainbow path {
-  animation: drawing-line 1s .5s linear forwards;
-}
-
-@keyframes drawing-line {
-
-  to {
-
-    stroke-dashoffset: 1px;
+    filter: blur(0);
   }
 
 }
